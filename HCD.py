@@ -28,16 +28,12 @@ def getTheCoordinateArray(file):
     ret, dst = cv2.threshold(dst,0.01*dst.max(),255,0)
     dst = np.uint8(dst)
     
-    
-    
     # find centroids
     ret, labels, stats, centroids = cv2.connectedComponentsWithStats(dst)
     
     # define the criteria to stop and refine the corners
     criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 100, 0.001)
     corners = cv2.cornerSubPix(gray,np.float32(centroids),(5,5),(-1,-1),criteria)
-    #print('width, heigth')
-    #print(corners)    #here u can get corners check for more information follow the link...........http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_features_harris/py_features_harris.html
     if cv2.waitKey(0) & 0xff == 27:
         cv2.destroyAllWindows()
     
