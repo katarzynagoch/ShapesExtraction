@@ -1,5 +1,5 @@
 # ShapesExtraction
-Extracting the coordinates of shapes ndoes from a learning dataset of images. Project for course Machine Learning at University of Muenster.
+Extracting the coordinates of shapes nodes from a learning dataset of images. Project for course Machine Learning at University of Muenster.
 ## Instalation
 To run the scripts, you need the to install following library (using [pip](https://pypi.org/project/pip/) or [conda](https://docs.conda.io/en/latest/)):
 - [opencv](https://github.com/opencv/opencv)
